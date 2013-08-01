@@ -2,6 +2,7 @@ package net.londatiga.fsq;
 
 import android.content.Context;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,10 +40,10 @@ public class NearbyAdapter extends BaseAdapter {
 
 	public View getView(int position, View convertView, ViewGroup parent) {
 		ViewHolder holder;
-		
+		Log.d("MyMessage", "Test 0");	
 		if (convertView == null) {
 			convertView	=  mInflater.inflate(R.layout.nearby_list, null);
-			
+			Log.d("MyMessage", "Test 1");
 			holder = new ViewHolder();
 			
 			holder.mNameTxt 		= (TextView) convertView.findViewById(R.id.tv_name);
@@ -57,13 +58,15 @@ public class NearbyAdapter extends BaseAdapter {
 		}
 
 		FsqVenue venue 	= mVenueList.get(position);
+
+		Log.d("MyMessage", "Test 2");
 	
 		holder.mNameTxt.setText(venue.name);
 		holder.mAddressTxt.setText(venue.address);
 		holder.mHereNowTxt.setText("(" + String.valueOf(venue.herenow) + " people here)");
 		holder.mDistanceTxt.setText(formatDistance(venue.direction));
 
-		holder.mRibbonImg.setVisibility((venue.type.equals("trending")) ? View.VISIBLE : View.INVISIBLE);
+		//holder.mRibbonImg.setVisibility((venue.type.equals("trending")) ? View.VISIBLE : View.INVISIBLE);
 		
         return convertView;
 	}

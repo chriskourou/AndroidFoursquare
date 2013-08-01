@@ -15,6 +15,7 @@ import android.widget.Toast;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 
@@ -38,8 +39,8 @@ public class Main extends Activity {
 	private ArrayList<FsqVenue> mNearbyList;
 	private ProgressDialog mProgress;
 	
-	public static final String CLIENT_ID = "your_client_id_here";
-	public static final String CLIENT_SECRET = "your_client_secret_here";
+	public static final String CLIENT_ID = "E15YIJFE0MWKCEGT53JZK4V4IDMOI3OKUQNY43XTLUI0DJFZ";
+	public static final String CLIENT_SECRET = "QUKIDPXTX5T55LAV3QTVGHTXWN2GGKS5ASRTFK2YEYPQF32F";
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -117,7 +118,6 @@ public class Main extends Activity {
     			int what = 0;
     			
     			try {
-    				
     				mNearbyList = mFsqApp.getNearby(latitude, longitude);
     			} catch (Exception e) {
     				what = 1;
@@ -133,8 +133,10 @@ public class Main extends Activity {
     	@Override
     	public void handleMessage(Message msg) {
     		mProgress.dismiss();
+			Log.d("MyMessage", "Test main1" + msg.what);
     		
     		if (msg.what == 0) {
+				Log.d("MyMessage", "Test main2");
     			if (mNearbyList.size() == 0) {
     				Toast.makeText(Main.this, "No nearby places available", Toast.LENGTH_SHORT).show();
     				return;
