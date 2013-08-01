@@ -26,30 +26,13 @@
 		android:layout_height="wrap_content" 
 		android:text=""/>
 		
-	<EditText
-		android:id="@+id/et_latitude"
-		android:layout_below="@id/tv_name"
-		android:layout_marginTop="5dp"
-		android:layout_width="150dp" 
-		android:layout_height="wrap_content"
-		android:hint="latitude"/>
-					
-	<EditText
-		android:id="@+id/et_longitude"
-		android:layout_below="@id/tv_name"
-		android:layout_toRightOf="@id/et_latitude"
-		android:layout_marginTop="5dp"
-		android:layout_width="150dp" 
-		android:layout_height="wrap_content"
-		android:hint="latitude"/>
-		
 	<Button
-		android:id="@+id/b_go"
-		android:layout_below="@id/et_latitude"
-		android:layout_marginTop="5dp"
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"
-		android:text=" Get Nearby Places "/>
+	    android:id="@+id/b_go"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/tv_name"
+	    android:layout_marginTop="5dp"
+	    android:text=" Get Nearby Places " />
 		
 	<ListView
 		android:id="@+id/lv_places"

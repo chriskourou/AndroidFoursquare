@@ -1,5 +1,6 @@
-package net.londatiga.fsq;
+package com.kourou.fouraccessq;
 
+import com.kourou.fouraccessq.R;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 

@@ -1,4 +1,4 @@
-package net.londatiga.fsq;
+package com.kourou.fouraccessq;
 
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;

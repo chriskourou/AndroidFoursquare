@@ -1,4 +1,4 @@
-package net.londatiga.fsq;
+package com.kourou.fouraccessq;
 
 import android.location.Location;
 
@@ -10,5 +10,5 @@ public class FsqVenue {
 	public Location location;
 	public int direction;
 	public int distance;
-	public int herenow;
+	public int checkins;
 }
